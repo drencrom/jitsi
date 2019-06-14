@@ -20,8 +20,7 @@ package net.java.sip.communicator.plugin.demuxcontactsource;
 import java.util.*;
 import java.util.regex.*;
 
-import org.jitsi.util.*;
-import org.jitsi.utils.*;
+import org.apache.commons.lang3.*;
 import org.jitsi.utils.logging.*;
 
 import net.java.sip.communicator.service.contactsource.*;
@@ -319,7 +318,7 @@ public class DemuxContactSource
                                             contactDetails);
 
             String displayName = contactDetail.getDisplayName();
-            if (!StringUtils.isNullOrEmpty(displayName))
+            if (!StringUtils.isEmpty(displayName))
                 genericContact.setDisplayDetails(displayName);
             else
                 genericContact.setDisplayDetails(contactDetail.getDetail());

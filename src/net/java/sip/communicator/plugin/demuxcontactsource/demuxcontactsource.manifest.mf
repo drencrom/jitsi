@@ -6,5 +6,6 @@ Bundle-Version: 0.0.1
 Bundle-SymbolicName: net.java.sip.communicator.plugin.demuxcontactsource
 Import-Package: net.java.sip.communicator.service.contactsource,
  net.java.sip.communicator.service.protocol,
- org.jitsi.util,
- org.osgi.framework
+ org.jitsi.utils.logging,
+ org.osgi.framework,
+ org.apache.commons.lang3

@@ -17,12 +17,12 @@
  */
 package net.java.sip.communicator.impl.notification;
 
+import org.apache.commons.lang3.*;
+
 import net.java.sip.communicator.service.notification.*;
 import net.java.sip.communicator.service.systray.*;
 import net.java.sip.communicator.service.systray.event.*;
 import net.java.sip.communicator.util.Logger;
-
-import org.jitsi.utils.*;
 
 /**
  * An implementation of the <tt>PopupMessageNotificationHandler</tt> interface.
@@ -67,7 +67,7 @@ public class PopupMessageNotificationHandlerImpl
         if(systray == null)
             return;
 
-        if(!StringUtils.isNullOrEmpty(message))
+        if(!StringUtils.isEmpty(message))
         {
             PopupMessage popupMsg
                     = new PopupMessage(title, message, icon ,tag);
